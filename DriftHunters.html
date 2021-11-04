@@ -11,7 +11,7 @@
 <script>
 var gameInstance;
 function invokeGame () {
-gameInstance = UnityLoader.instantiate('gameContainer', localStorage.getItem('darkMode') ? 'Build/drifted-dark.json' : 'Build/drifted.json', {onProgress: UnityProgress});
+gameInstance = UnityLoader.instantiate('gameContainer', localStorage.getItem('darkMode') ? 'https://rawcdn.githack.com/zackiscool000/DevelopingAGame2021/428802aa6705eb17fcdd7d7fcb72e56a573e1c37/drifted-dark.json' : 'https://rawcdn.githack.com/zackiscool000/DevelopingAGame2021/428802aa6705eb17fcdd7d7fcb72e56a573e1c37/drifted.json', {onProgress: UnityProgress});
 }
 </script>
 <script src="https://rawcdn.githack.com/zackiscool000/DevelopingAGame2021/7e59115fdab38617783441177d63c04aba5cb7df/UnityPostRun.js"></script>
