@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" id="viewport" content="width=device-width, minimum-scale=1.0" />
+<title>Drift Hunters</title>
+<link rel="stylesheet" href="https://rawcdn.githack.com/zackiscool000/DevelopingAGame2021/65e6f046e421a5773f79cab169244771e97ab749/style.css">
+<script src="https://rawcdn.githack.com/zackiscool000/DevelopingAGame2021/1f5dfeff64c8f65a07bfc0d05e9a699904b964a1/UnityProgress.js"></script>
+<script src="https://rawcdn.githack.com/zackiscool000/DevelopingAGame2021/8f0c9950aeb6d0401b46c6fb2c05e2fe95db6921/UnityLoader.js"></script>
+<script>
+var gameInstance;
+function invokeGame () {
+gameInstance = UnityLoader.instantiate('gameContainer', localStorage.getItem('darkMode') ? 'Build/drifted-dark.json' : 'Build/drifted.json', {onProgress: UnityProgress});
+}
+</script>
+<script src="https://rawcdn.githack.com/zackiscool000/DevelopingAGame2021/7e59115fdab38617783441177d63c04aba5cb7df/UnityPostRun.js"></script>
+</head>
+<body class="drift-hunters disable-ad-rotation">
+<div id="webgl-content" class="webgl-content">
+<div class="row billboard-placeholder-wrapper">
+<div id="billboard-placeholder"></div>
+</div>
+<div class="game-wrapper">
+<div id="gameContainer"></div>
+<div class="footer show">
+<div class="webgl-logo"></div>
+<div class="bug tooltip" onclick="window.parent.location.href='https://www.drifted.com/contact/'; return false;"></div>
+<div class="category tooltip" onclick="window.parent.location.href='https://www.drifted.com/drifting-games/'; return false;"></div>
+<div class="fullscreen tooltip" onclick="gameInstance.SetFullscreen(1);"></div>
+<div id="btn-installer" class="hide install-pwa tooltip"></div>
+<div class="title">Drift Hunters</div>
+</div>
+<span class="upsell">Play more <a href="https://www.drifted.com/games">games</a> at drifted.com</span>
+</div>
+<div class="sidebar-placeholder-wrapper">
+<div id="sidebar-placeholder"></div>
+</div>
+</div>
+<script type="text/javascript">
+fnInitPWAAppInstaller();
+</script>
+</body>
+</html>
